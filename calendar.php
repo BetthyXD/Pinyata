@@ -8,7 +8,9 @@ if (!isset($_COOKIE["email"]) || !isset($_COOKIE["hashId"])) {
     exit();
 } else {
     $email = $_COOKIE["email"];
-    require_once("db.php");
+    if(!isset($con)){
+        $con = db_connect();
+    }
 }
 
 

@@ -1,4 +1,6 @@
 <?php
+require_once("starter.php");
+$con = db_connect();
 ini_set('display_errors', '1');
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -7,7 +9,6 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 if (date("H") == 7 && date("i") >= 45||date("H") == 8 && date("i") <= 15) {
     
-    require_once("db.php");
     if($con){
         $info = array();
         $svatekDB =mysqli_query($con, "SELECT jmeno FROM svatek WHERE den = '".date('d')."' AND mesic = '".date('m')."'");

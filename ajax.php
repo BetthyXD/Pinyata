@@ -1,11 +1,15 @@
 <?php
+require_once("starter.php");
+if(!isset($con)){
+    $con = db_connect();
+}
+
 if (!isset($_COOKIE["email"]) || !isset($_COOKIE["hashId"])) {
     echo false;
     exit;
 }
 $email = $_COOKIE["email"];
 if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-require("db.php");
 if (isset($_POST["remover"])) {
         if(!hasNotCode($_POST["remover"])){
             echo false;

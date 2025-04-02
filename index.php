@@ -1,6 +1,6 @@
 <?php
-//update page
 require_once("starter.php");
+$con = db_connect();
 
 if (isset($_COOKIE["email"]) && isset($_COOKIE["hashId"])) {
     if(isset($_SESSION["destination"])){
@@ -198,7 +198,6 @@ form {
         if(filter_var($_POST["emailIn"], FILTER_VALIDATE_EMAIL)){
             $email = $_POST["emailIn"];
             $logCode = generateRandomString(15);
-        require_once("db.php");
         require("mail.php");
     if($con){
 
@@ -217,7 +216,6 @@ form {
 }}} else {
     if(isset($_GET["id"])){
         if(isId($_GET["id"])){
-        require_once("db.php");
         $user = mysqli_query($con, "SELECT email FROM emailAddresses WHERE loginId = '".$_GET["id"]."'");
         if(mysqli_num_rows($user)>0){
             $email = mysqli_fetch_array($user)["email"];

@@ -8,7 +8,7 @@ if (!isset($_COOKIE["email"]) || !isset($_COOKIE["hashId"])) {
     exit();
 } else{
     $email = $_COOKIE["email"];
-    require_once("db.php");
+    $con = db_connect();
 }
 
 ?>
@@ -33,7 +33,7 @@ if (!isset($_COOKIE["email"]) || !isset($_COOKIE["hashId"])) {
 
 
     ?>
-    <p onClick="window.location.href = '/calendar';" style="font-size: 1.2rem; text-align: center; margin: 3rem 0 0 0; padding: 0; cursor: pointer;"><b>→</b> Novinka! <b>Kalendář!</b></p>
+    <p onClick="window.location.href = 'calendar';" style="font-size: 1.2rem; text-align: center; margin: 3rem 0 0 0; padding: 0; cursor: pointer;"><b>→</b> Novinka! <b>Kalendář!</b></p>
 
     <div class="page">
     <div onClick="sorter()" id="sort">Řazení: Podle data</div>
