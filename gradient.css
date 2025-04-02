@@ -1,0 +1,366 @@
+
+
+.gradient {
+    padding: 1rem;
+    height: 60vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: auto;
+
+    gap: 1rem;
+    padding: 1rem 0;
+    max-height: calc(100% - 2rem);
+}
+
+.page {
+    padding-top: 3%;
+}
+
+
+.person, .day, .dayInWeek {
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 2rem;
+    height: 5.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+
+.person:hover, .day:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+#addNewPersonButton:hover {
+    opacity: 1;
+}
+#addNewPersonButton:hover svg {
+    transform:scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+#addNewPersonButton svg {
+height: 3rem;
+transition: 0.2s;
+}
+.person h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.person h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(80, 80, 80);
+
+}
+
+.notFound {
+    background-color: #ffcccc;
+}
+
+.notFound h3 {
+    color: red;
+    font-weight: bold;
+}
+
+
+#list,
+#noRecord {
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 60vh;
+    background: rgb(255, 255, 255, 0.2);
+    padding: 0 1rem;
+
+}
+
+#noRecord {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+
+}
+
+#noRecord svg {
+    width: 15rem;
+    height: auto;
+
+}
+
+#noRecord h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+#noRecord p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+#personPopUpBlack .personPopUp {
+    margin: 11.5% auto 0 auto;
+    width: 700px;
+    min-height: 45vh;
+    background: white;
+    border-radius: 40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+
+}
+
+.personPopUp form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 2.5rem 15%;
+    box-sizing: border-box;
+    gap: 1.5rem;
+}
+
+.personPopUp form div {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+}
+
+.personPopUp form .submit,
+.personPopUp form .cancel {
+    box-sizing: border-box;
+    padding: 0.7rem;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 14rem;
+    cursor: pointer;
+
+}
+
+.personPopUp form .submit {
+    background: linear-gradient(10deg, var(--primary), var(--secondary));
+    border: none;
+
+    color: white;
+
+}
+
+.personPopUp form .cancel {
+
+    background: none;
+    border: solid 2px var(--secondary);
+    color: var(--secondary);
+}
+
+.personPopUp form input {
+    padding: 0.7rem;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    border: solid 2px gray;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+.personPopUp form h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#personPopUpBlack {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: none;
+
+}
+
+#addNewPersonButton {
+    cursor: pointer;
+}
+#personPopUpBlack .personPopUp {
+    margin: 7% auto 0 auto;
+}
+    .personPopUp form div {
+        margin-top: 0.7rem;
+    }
+    .personPopUp form h1{
+        margin-bottom: 0.7rem;
+    }
+    .personPopUp form {
+    gap: 1.5rem;
+}
+    .personPopUp form label{
+        font-family: "Segoe UI Local";
+        font-size: 1.1rem;
+        color: #444444;
+        margin: 0 0 0 0.5rem;
+        display: block;
+    }
+    
+    .personPopUp form input {
+        margin-top: 0;
+        font-family: "Segoe UI Local";
+    }
+    .personPopUp form span input {
+        margin-top: 0.5rem;
+    }
+    .personPopUp form span #birthdayYIn {
+        width: 200%;
+    }
+    .personPopUp form span span {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+#sort{
+    background:white;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 3rem;
+left: 3rem;
+box-shadow: rgba(17, 17, 26, 0.15) 0px 0px 15px;
+border: solid 1px #DDDDDD;
+padding: 1rem 2rem;
+font-size: 1.2rem;
+cursor: pointer;
+}
+#logout {
+    background:white;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 3rem;
+right: 3rem;
+box-shadow: rgba(17, 17, 26, 0.15) 0px 0px 15px;
+border: solid 1px #DDDDDD;
+padding: 1rem 2rem;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 950px) {
+
+    #logout {
+        border: none;
+        box-shadow: none;
+        text-align: center;
+        width: 5rem;
+    position: static;
+        margin: 0 auto 1rem auto;
+font-size: 1rem;
+
+}
+
+#sort {
+    display: none;
+
+}
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #list,
+    .gradient {
+
+        height: 70vh;
+    }
+
+    .personPopUp form div {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .personPopUp form .submit {
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .personPopUp form .cancel {
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    #personPopUpBlack .personPopUp {
+        width: 60%;
+        min-height: 55vh;
+        margin: 14% auto 0 auto;
+    }
+
+    .gradient {
+        width: 70%;
+    }
+
+    #noRecord svg {
+        width: 10rem;
+        height: auto;
+
+    }
+
+    #noRecord h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+
+    #noRecord p {
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #list {
+
+        height: 70vh;
+    }
+
+    .gradient {
+        width: 80%;
+    }
+
+    #personPopUpBlack .personPopUp {
+        width: 80%;
+        margin: 19% auto 0 auto;
+    }
+}

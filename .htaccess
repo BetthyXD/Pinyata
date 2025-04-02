@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^download\.betthy\.cz$ [NC]
+RewriteRule ^(.+)$ /download/$1 [L]
+
+ErrorDocument 404 /deadend/404.html
+ErrorDocument 403 /deadend//403.html
+
+RewriteRule ^reminder$ reminder.php [L]
+RewriteRule ^calendar$ calendar.php [L]
+RewriteRule ^update$ /deadend/update.html [L]
+RewriteRule ^db.php$ - [F]
+RewriteRule ^mail.php$ - [F]
+RewriteRule ^PHPMailer/ - [F]
+RewriteRule ^updateChecker$ - [F]
+
+RewriteRule ^svatba$ https://youtu.be/696EAmhfl7Y [L]

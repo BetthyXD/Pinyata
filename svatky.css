@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Segoe UI Local';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Local'), url('fonts/segoeui.woff') format('woff');
+}
+
+:root {
+    --primary: #E326C4;
+    --secondary: #f4b556;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+html {
+    font-family: 'Segoe UI Local';
+}
+.gradient {
+    margin: 0 auto;
+    width: 900px;
+    background: linear-gradient(10deg, var(--primary), var(--secondary));
+    border-radius: 40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+footer {
+    color: gray;
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+}
+
+footer .smaller {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 950px) {
+
+    .gradient {
+        padding: 1rem;
+        width: 70%;
+    }}
+
